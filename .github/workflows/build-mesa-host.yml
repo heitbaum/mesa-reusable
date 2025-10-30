@@ -145,7 +145,7 @@ jobs:
       buildos: ${{ github.event.inputs.buildos }}
     secrets: inherit
 
-  # x86_64 (use Amlogic to do the build of mesa)
+  # x86_64
   x86_64:
     permissions:
       contents: write
