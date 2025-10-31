@@ -131,6 +131,9 @@ jobs:
           echo ""
           echo "inputs.debug: ${{ inputs.debug }}"
           echo "inputs.ephemeral: ${{ inputs.ephemeral }}"
+          echo ""
+          echo "lscpu:"
+          lscpu
 
       - name: Build LE in docker container
         run: |
