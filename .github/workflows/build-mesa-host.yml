@@ -47,11 +47,11 @@ jobs:
       release_doesnt_exists: ${{ steps.check_release.outputs.release_doesnt_exists }}
       upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
           path: "mesa-reusable"
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.inputs.gitref_to_build || 'master' }}
           fetch-depth: 2

@@ -92,7 +92,7 @@ jobs:
     timeout-minutes: 360
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ inputs.gitref }}
           fetch-depth: 2
@@ -164,7 +164,7 @@ jobs:
 
       - name: Upload failed artifacts - ephemeral
         if: inputs.ephemeral == 'ephemeral'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ inputs.group }}-failed
           path: LibreELEC.tv/${{ env.TARGETBUILDDIR }}/artifact/
