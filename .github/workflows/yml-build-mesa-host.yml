@@ -104,6 +104,7 @@ jobs:
           cd LibreELEC.tv
           sed -i -e "s/RUN adduser/RUN adduser --uid $(id -u)/" tools/docker/jammy/Dockerfile
           sed -i -e "s/RUN useradd docker/RUN useradd docker -o -u $(id -u)/" tools/docker/noble/Dockerfile
+          sed -i -e "s/RUN useradd docker/RUN useradd docker -o -u $(id -u)/" tools/docker/resolute/Dockerfile
           sed -i -e 's/BUILD_REUSABLE=""/BUILD_REUSABLE="mesa:host"/' distributions/LibreELEC/options
 
       - name: Create docker image for build

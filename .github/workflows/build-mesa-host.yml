@@ -9,12 +9,13 @@ on:
         type: string
       buildos:
         description: "docker image to build with"
-        default: noble
+        default: resolute
         required: true
         type: choice
         options:
           - jammy
           - noble
+          - resolute
       target:
         description: "targets to build"
         default: all
